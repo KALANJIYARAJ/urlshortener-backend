@@ -15,7 +15,7 @@ const URL1 = process.env.URL1
 
 app.use(
   cors({
-    orgin: "http://localhost:3000",
+    orgin: "https://papaya-kataifi-4a8871.netlify.app",
   })
 );
 
@@ -254,7 +254,7 @@ app.get("/:urlId", async (req,res)=>{
 
 //frond end redirect
 app.get('/',function(req,res){
-    res.redirect('http://localhost:3000/');
+    res.redirect('https://papaya-kataifi-4a8871.netlify.app/');
   });
 
 
