@@ -136,6 +136,8 @@ app.post("/forgot", async (req, res) => {
       .findOne({ email: req.body.email });
     await connection.close();
 
+    if(user){
+
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -162,6 +164,9 @@ app.post("/forgot", async (req, res) => {
     });
 
     res.json({ message: "Message sent" });
+  }else{
+    res.json("The email id does't not registered")
+  }
   } catch (error) {
     res.status(400).send({ sucess: false, msg: error.message });
   }
