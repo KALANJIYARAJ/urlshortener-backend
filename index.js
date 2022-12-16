@@ -163,7 +163,7 @@ app.post("/forgot", async (req, res) => {
       transporter.close();
     });
 
-    res.json({ message: "Message sent" });
+    res.json("Message sent");
   }else{
     res.json("The email id does't not registered")
   }
