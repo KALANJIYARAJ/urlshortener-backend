@@ -58,7 +58,7 @@ app.post("/user/register", async (req, res) => {
       to: user.email,
       subject: "Rest Password",
       text: "Hi Raj",
-      html: `<h1>Hiii ${user.first_name} <a href="https://papaya-kataifi-4a8871.netlify.app/activation/${user._id}">please click the link and reset your password</a> </h1>`,
+      html: `<h1>Hiii ${user.first_name} <a href="https://papaya-kataifi-4a8871.netlify.app/activation/${user._id}">please click the link and activate your account</a> </h1>`,
     };
     transporter.sendMail(mailOptions, function (error, response) {
       if (error) {
